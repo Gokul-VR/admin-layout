@@ -8,6 +8,7 @@ import {
   HelpCircle,
   LogOut,
   ChevronDown,
+  KeyRound
 } from "lucide-react";
 
 const sidebarItems = [
@@ -28,6 +29,7 @@ const sidebarItems = [
     to: "/settings",
   },
   { icon: HelpCircle, label: "Help & Support", to: "/help" },
+  { icon: KeyRound, label: "Auth Page", to: "/authPage" },
 ];
 
 const logoutItem = { icon: LogOut, label: "Logout", to: "/logout" };

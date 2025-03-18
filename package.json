@@ -1,5 +1,5 @@
 {
-  "name": "kanban",
+  "name": "responsive-layout",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.12",
-    "clsx": "^2.1.1",
-    "focus-trap-react": "^11.0.3",
-    "framer-motion": "^12.4.10",
+    "@tailwindcss/vite": "^4.0.13",
     "lucide-react": "^0.479.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "tailwindcss": "^4.0.12"
+    "react-router-dom": "^7.3.0",
+    "tailwindcss": "^4.0.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

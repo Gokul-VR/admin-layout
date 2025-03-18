@@ -2,8 +2,10 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../components/layout";
 import Dashboard from "../components/pages/dashboard";
 import PageUnderConstruction from "../components/pages/pageUnderConstruction";
+import AuthPage from "../components/pages/authPage";
 export const PATHS = {
   DASHBOARD: "/dashboard",
+  AUTH: "/authPage",
 };
 
 export const router = createBrowserRouter([
@@ -20,9 +22,13 @@ export const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "*", // Catch-all route for unmatched paths
-        element: <PageUnderConstruction />, // Render the "Page Under Construction" component
+        path: "*",
+        element: <PageUnderConstruction />,
       },
     ],
+  },
+  {
+    path: PATHS.AUTH,
+    element: <AuthPage />,
   },
 ]);
