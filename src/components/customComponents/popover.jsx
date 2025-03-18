@@ -32,7 +32,7 @@ export const Popover = ({
   return (
     <div
       ref={dropdownRef}
-      className={`absolute z-40 rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-800 dark:bg-gray-dark ${className}`}
+      className={`absolute z-40 rounded-xl border border-gray-200 bg-white shadow-lg ${className}`}
       style={style}
     >
       {children}
