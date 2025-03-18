@@ -44,15 +44,11 @@ function Dashboard() {
       // <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xs border border-gray-100 dark:border-gray-700 p-6">
       <div className="bg-white rounded-xl shadow-xs border border-gray-100 p-6">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-            {title}
-          </h3>
-          <div className="p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            {icon}
-          </div>
+          <h3 className="text-sm font-medium text-gray-500 ">{title}</h3>
+          <div className="p-2 bg-gray-50 rounded-lg">{icon}</div>
         </div>
         <div className="flex flex-col">
-          <span className="text-2xl font-bold text-gray-800 dark:text-white">
+          <span className="text-2xl font-bold text-gray-800 ">
             {value}
           </span>
           <div className="flex items-center mt-3">
@@ -68,7 +64,7 @@ function Dashboard() {
             >
               {change}
             </span>
-            <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">
+            <span className="text-sm text-gray-500  ml-1">
               from last month
             </span>
           </div>
