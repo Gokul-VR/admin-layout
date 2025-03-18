@@ -41,7 +41,8 @@ function Dashboard() {
   ];
   function StatCard({ title, value, change, trend, icon }) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xs border border-gray-100 dark:border-gray-700 p-6">
+      // <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xs border border-gray-100 dark:border-gray-700 p-6">
+      <div className="bg-white rounded-xl shadow-xs border border-gray-100 p-6">
         <div className="flex justify-between items-center mb-2">
           <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
             {title}
