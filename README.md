@@ -2,6 +2,8 @@
 
 A fully responsive, minimalistic admin dashboard built entirely with Tailwind CSS, without using any external packages. This dashboard is designed to provide a clean and efficient UI for managing applications, featuring a collapsible sidebar, notification dropdown, custom UI components, and more.
 
+This project is designed to be a starter template for developers. Anyone can clone this repository and start building their own admin dashboard, as the layout and core components are already set up
+
 Features
 
 ✅ Fully Responsive Layout – Adapts seamlessly to different screen sizes.
@@ -19,3 +21,7 @@ Features
 ✅ Routing Support – Basic route structure for navigating between sections.
 
 ✅ Lightweight & Fast – No external dependencies, purely Tailwind CSS.
+
+Future Updates:
+
+More components and features will be added regularly.
