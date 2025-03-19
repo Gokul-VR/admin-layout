@@ -29,30 +29,27 @@ export default function Modal({
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      {/* Backdrop with blur effect */}
       <div
         className="fixed inset-0 bg-black/30 backdrop-blur-sm"
         onClick={onClose}
       ></div>
 
-      {/* Modal container */}
       <div
         className={`
-flex min-h-full items-center justify-center ${
-          fullScreen ? "" : "p-4"
-        } text-center
-${centered ? "items-center" : "items-start md:items-center"}
-`}
+          flex min-h-full items-center justify-center ${
+            fullScreen ? "" : "p-4"
+          } text-center
+        `}
       >
         <div
           className={`
-          relative transform overflow-hidden bg-white text-left shadow-xl transition-all
-          ${
-            fullScreen
-              ? "fixed inset-0 w-full h-full"
-              : "w-full max-w-md rounded-lg"
-          }
-        `}
+            relative transform overflow-hidden bg-white text-left shadow-xl transition-all
+            ${
+              fullScreen
+                ? "fixed inset-0 w-full h-full"
+                : "w-full max-w-md rounded-lg"
+            }
+          `}
           onClick={(e) => e.stopPropagation()}
         >
           {children}
