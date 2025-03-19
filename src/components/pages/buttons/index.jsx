@@ -33,7 +33,7 @@ export default function ButtonsPage() {
           <LoadingButton
             onClick={handleClick}
             size="medium"
-            className="bg-[#111010] hover:bg-[#333335] text-white text-sm h-10 w-1/2"
+            className="bg-[#111010] hover:bg-[#333335] text-white text-sm h-10 w-full md:w-2/3 "
             isLoading={isLoading}
           >
             {isLoading ? "Submitting..." : "Submit"}
