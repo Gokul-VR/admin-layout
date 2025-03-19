@@ -213,7 +213,8 @@ export default function Header({ openNav, setOpenNav, toggleMobileNav }) {
 
       setPopoverPosition({
         top: bellRect.bottom,
-        right: window.innerWidth - bellRect.right - bellRect.width / 2,
+//        right: window.innerWidth - bellRect.right - bellRect.width / 2,
+        right: document.documentElement.clientWidth - bellRect.right - bellRect.width / 2,
       });
     }
     setIsPopoverOpen(!isPopoverOpen);
