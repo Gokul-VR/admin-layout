@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Input from "../../customComponents/input";
+import LoadingButton from "../../customComponents/button-components/loadingButton";
 
 export default function AuthPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -84,7 +86,7 @@ export default function AuthPage() {
                         >
                           Email
                         </label>
-                        <input
+                        {/* <input
                           id="email"
                           placeholder="name@example.com"
                           type="email"
@@ -93,6 +95,13 @@ export default function AuthPage() {
                           autoCorrect="off"
                           disabled={isLoading}
                           className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
+                        /> */}
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="name@example.com"
+                          autoComplete="email"
+                          disabled={isLoading}
                         />
                       </div>
                       <div className="grid gap-2">
@@ -110,16 +119,22 @@ export default function AuthPage() {
                             Forgot password?
                           </a>
                         </div>
-                        <input
+                        <Input
                           id="password"
                           type="password"
-                          autoCapitalize="none"
                           autoComplete="current-password"
                           disabled={isLoading}
-                          className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
                         />
                       </div>
-                      <button
+                      <LoadingButton
+                        type="submit"
+                        size="medium"
+                        className="bg-[#111010] hover:bg-[#333335] text-white text-sm h-10"
+                        isLoading={isLoading}
+                      >
+                        {isLoading ? "Signing In..." : "Sign In"}
+                      </LoadingButton>
+                      {/* <button
                         type="submit"
                         disabled={isLoading}
                         className="inline-flex h-10 items-center justify-center rounded-md bg-[#111010] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#333335] focus:outline-none focus:ring-2 focus:ring-[#333335] focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
@@ -151,7 +166,7 @@ export default function AuthPage() {
                         ) : (
                           "Sign In"
                         )}
-                      </button>
+                      </button> */}
                     </div>
                   </form>
                   <div className="relative">
@@ -222,7 +237,12 @@ export default function AuthPage() {
                         >
                           Full Name
                         </label>
-                        <input
+                        <Input
+                          id="name"
+                          placeholder="Jennifer"
+                          disabled={isLoading}
+                        />
+                        {/* <input
                           id="name"
                           placeholder="Jennifer"
                           type="text"
@@ -230,7 +250,7 @@ export default function AuthPage() {
                           autoCorrect="off"
                           disabled={isLoading}
                           className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
-                        />
+                        /> */}
                       </div>
                       <div className="grid gap-2">
                         <label
@@ -239,15 +259,12 @@ export default function AuthPage() {
                         >
                           Email
                         </label>
-                        <input
-                          id="email-signup"
-                          placeholder="name@example.com"
+                        <Input
+                          id="email"
                           type="email"
-                          autoCapitalize="none"
+                          placeholder="name@example.com"
                           autoComplete="email"
-                          autoCorrect="off"
                           disabled={isLoading}
-                          className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
                         />
                       </div>
                       <div className="grid gap-2">
@@ -257,16 +274,30 @@ export default function AuthPage() {
                         >
                           Password
                         </label>
-                        <input
+                        <Input
                           id="password-signup"
                           type="password"
-                          autoCapitalize="none"
                           autoComplete="new-password"
                           disabled={isLoading}
-                          className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
                         />
+                        {/* <input
+                            id="password-signup"
+                            type="password"
+                            autoCapitalize="none"
+                            autoComplete="new-password"
+                            disabled={isLoading}
+                            className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333335] focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"
+                          /> */}
                       </div>
-                      <button
+                      <LoadingButton
+                        size="medium"
+                        onClick={() => setShowFullScreenModal(true)}
+                        className="bg-[#111010] hover:bg-[#333335] text-white text-sm h-10"
+                        isLoading={isLoading}
+                      >
+                        {isLoading ? "Creating Account..." : "Create Account"}
+                      </LoadingButton>
+                      {/* <button
                         type="submit"
                         disabled={isLoading}
                         className="inline-flex h-10 items-center justify-center rounded-md bg-[#111010] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#333335] focus:outline-none focus:ring-2 focus:ring-[#333335] focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
@@ -298,7 +329,7 @@ export default function AuthPage() {
                         ) : (
                           "Create Account"
                         )}
-                      </button>
+                      </button> */}
                     </div>
                   </form>
                   <div className="relative">

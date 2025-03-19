@@ -82,23 +82,6 @@ const UserTable = () => {
           <thead className="text-gray-700 ">
             <tr>
               <th className="px-4 py-3 text-center w-10">
-                {/* <input
-                  type="checkbox"
-                  className="w-4 h-4 xl "
-                  onChange={(e) => {
-                    setSelectedUsers(
-                      e.target.checked
-                        ? paginatedUsers.map((user) => user.id)
-                        : []
-                    );
-                  }}
-                  checked={
-                    paginatedUsers.length > 0 &&
-                    paginatedUsers.every((user) =>
-                      selectedUsers.includes(user.id)
-                    )
-                  }
-                /> */}
                 <Checkbox
                   checked={
                     paginatedUsers.length > 0 &&
@@ -124,12 +107,6 @@ const UserTable = () => {
             {paginatedUsers.map((user) => (
               <tr key={user.id} className="hover:bg-gray-50">
                 <td className="px-4 py-3 text-center w-10">
-                  {/* <input
-                    type="checkbox"
-                    className="w-4 h-4"
-                    checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleCheckboxChange(user.id)}
-                  /> */}
                   <Checkbox
                     checked={selectedUsers.includes(user.id)}
                     onChange={(checked) => {

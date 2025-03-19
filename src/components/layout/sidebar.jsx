@@ -8,26 +8,29 @@ import {
   HelpCircle,
   LogOut,
   ChevronDown,
-  KeyRound
+  KeyRound,
+  Component,
 } from "lucide-react";
 
 const sidebarItems = [
   { icon: Home, label: "Dashboard", to: "/dashboard" },
-  { icon: BarChart, label: "Analytics", to: "/analytics" },
   {
-    icon: Users,
-    label: "Customers",
+    icon: Component,
+    label: "Components",
     to: "#",
     children: [
-      { label: "Sales Customer", to: "/customers/sales" },
-      { label: "Market", to: "/customers/market" },
+      { label: "Modal", to: "/components/modals" },
+      { label: "Buttons", to: "/components/buttons" },
     ],
   },
+  { icon: BarChart, label: "Analytics", to: "/analytics" },
+
   {
     icon: Settings,
     label: "Settings",
     to: "/settings",
   },
+
   { icon: HelpCircle, label: "Help & Support", to: "/help" },
   { icon: KeyRound, label: "Auth Page", to: "/authPage" },
 ];
